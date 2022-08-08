@@ -6,12 +6,12 @@ version="1.0.0"
 #Replace the $1 var by "option" just to make the script more readable/less complex
 option="${1}"
 
-#If the option passed to the "pman" command matches an available man page, print it to a PDF file via "zathura"
+#If the option passed to the "zaman" command matches an available man page, print it to a PDF file via "zathura"
 if man -k . | awk '{print $1}' | grep -iq ^"${option}"$ ; then
 	man -Tpdf "${option}" | zathura --mode=fullscreen -
 else
 	case "${option}" in
-		#If no option is passed to the "pman" command, print the list of available man pages through "dmenu" and print the selected one to a PDF file via "zathura"
+		#If no option is passed to the "zaman" command, print the list of available man pages through "dmenu" and print the selected one to a PDF file via "zathura"
 		"")
 			man_selected=$(man -k . | awk '{print $1}' | dmenu -l 15)
 			
@@ -19,26 +19,26 @@ else
 				man -Tpdf "${man_selected}" | zathura --mode=fullscreen -
 			else
 				man "${man_selected}"
-				echo >&2 "Try 'pman --help' for more information."
+				echo >&2 "Try 'zaman --help' for more information."
 				exit 1
 			fi
 		;;
-		#If the -v (or --version) option is passed to the "pman" command, print the current version
+		#If the -v (or --version) option is passed to the "zaman" command, print the current version
 		-v|--version)
 			echo "${version}"
 			exit 0
 		;;
-		#If the -h (or --help) option is passed to the "pman" command, print the documentation (man page)
-		#The documentation is also readable here https://github.com/Antiz96/pman/blob/main/README.md or by typing the following command in a terminal : man pman
+		#If the -h (or --help) option is passed to the "zaman" command, print the documentation (man page)
+		#The documentation is also readable here https://github.com/Antiz96/zaman/blob/main/README.md or by typing the following command in a terminal : man zaman
 		-h|--help)
 			#Print the documentation (man page) and quit
-			man pman | col
+			man zaman | col
 			exit 0
 		;;
 		#If any other option(s) are passed to the script, print an error and quit
 		*)
 			man "${option}"
-			echo >&2 "Try 'pman --help' for more information."
+			echo >&2 "Try 'zaman --help' for more information."
 			exit 1
 		;;
 	esac

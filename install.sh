@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pkgname="pman"
-url="https://github.com/Antiz96/pman"
-latest_release=$(curl -s https://raw.githubusercontent.com/Antiz96/pman/main/latest_release.txt)
+pkgname="zaman"
+url="https://github.com/Antiz96/zaman"
+latest_release=$(curl -s https://raw.githubusercontent.com/Antiz96/zaman/main/latest_release.txt)
 
 checksum=$(curl -Ls "${url}/releases/download/v${latest_release}/sha256sum.txt")
 current_version=$("${pkgname}" -v 2>/dev/null)
@@ -12,7 +12,7 @@ package() {
 	package_manager=$( (ls /usr/bin/apt || ls /usr/bin/dnf || ls /usr/bin/pacman || ls /usr/bin/emerge) 2>/dev/null | awk -F/ '{print $4}' )
 
 	if [ -z "${package_manager}" ]; then
-		echo -e "This script only supports the following package manager to handle dependencies :\napt\ndnf\npacman\nemerge\n\nYour package manager is not supported\nYou'll need to install the following packages yourself to make \"pman\" work correctly (if you don't have them installed already)\nzathura\zathura-pdf-poppler\ndmenu"
+		echo -e "This script only supports the following package manager to handle dependencies :\napt\ndnf\npacman\nemerge\n\nYour package manager is not supported\nYou'll need to install the following packages yourself to make \"zaman\" work correctly (if you don't have them installed already)\nzathura\zathura-pdf-poppler\ndmenu"
 	fi
 	
 	if ! command -v zathura > /dev/null ; then
