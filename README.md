@@ -11,7 +11,8 @@ A simple tool that prints man pages in a PDF file (with vim keys support) for an
 
 ## Description
 
-A simple tool that prints man pages in a PDF file (with vim keys support) via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading, which also allows you to select the man page to display through a list generated via [Dmenu](https://tools.suckless.org/dmenu/).
+A simple tool that prints man pages in a PDF file (with vim keys support) via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
+It also allows you to select the man page to display through a list of all the available man pages on your system generated via [Dmenu](https://tools.suckless.org/dmenu/).
 
 ## Installation
 
@@ -57,6 +58,8 @@ zaman ls
 Check the screenshots below for more information.
 
 ### Screenshot
+
+Coming Soon
 
 ## Documentation
 
