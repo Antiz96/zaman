@@ -60,7 +60,17 @@ Check the screenshots below for more information.
 
 ### Screenshot
 
-Coming Soon
+Type the `zaman` command in your terminal to display a list/menu in which you can navigate through all the available man pages on your system with your keyboard (up and down arrow keys and search by typing).  
+
+![zaman](https://user-images.githubusercontent.com/53110319/183697489-cd2b8c1e-334c-42f3-be8d-2c0b4a7e002c.png)
+
+Alternatively, you can specify the man page to open directly in the command (example below with the "ls" man page) :
+
+![zaman_ls](https://user-images.githubusercontent.com/53110319/183697494-2c268494-64cd-414f-a942-cac7a87580ba.png)
+
+The man page will open in fullscreen as a PDF file in [Zathura](https://pwmt.org/projects/zathura/) :
+
+![zaman_with_argument](https://user-images.githubusercontent.com/53110319/183697495-25951c0d-fc93-4606-a9bf-712739272460.png)
 
 ## Documentation
 
