@@ -9,77 +9,31 @@ current_version=$("${pkgname}" -v 2>/dev/null)
 
 package() {
 
-	package_manager=$( (ls /usr/bin/apt || ls /usr/bin/dnf || ls /usr/bin/pacman || ls /usr/bin/emerge) 2>/dev/null | awk -F/ '{print $4}' )
+	dependencies="groff zathura zathura-pdf-poppler dmenu"
+	extra_dependencies="groff-perl \"perl(Compress::Zlib)\""
 
-	if [ -z "${package_manager}" ]; then
-		echo -e "This script only supports the following package manager to handle dependencies :\napt\ndnf\npacman\nemerge\n\nYour package manager is not supported\nYou'll need to install the following packages yourself to make \"zaman\" work correctly (if you don't have them installed already)\nzathura\zathura-pdf-poppler\ndmenu"
-	fi
+	package_manager=$( (ls /usr/bin/apt || ls /usr/bin/dnf || ls /usr/bin/pacman || ls /usr/bin/emerge) 2>/dev/null | awk -F/ '{print $4}' )
 	
-	if ! command -v zathura > /dev/null ; then
-		echo "Installing dependencies via ${package_manager} : zathura"
-		
-		case "${package_manager}" in
-			apt)
-				sudo apt install -y zathura > /dev/null || exit 1
-			;;
-			dnf)
-				sudo dnf install -y zathura > /dev/null || exit 1
-			;;
-			pacman)
-				sudo pacman -S --noconfirm zathura > /dev/null || exit 1
-			;;
-			emerge)
-				sudo emerge zathura > /dev/null || exit 1
-			;;
-		esac
+	if [ -z "${package_manager}" ]; then
+		echo -e "This script only supports the following package manager to handle dependencies :\napt\ndnf\npacman\nemerge\n\nYour package manager is not supported\nYou'll need to install the following packages yourself to make \"zaman\" work correctly (if you don't have them installed already) :\n${dependencies}"
+	else
+		echo -e "Checking and installing the following dependencies via ${package_manager} :\n${dependencies} (+ ${extra_dependencies} for RedHat/Fedora based distros)."
 	fi
 
 	case "${package_manager}" in
 		apt)
-			if ! apt list --installed | grep -q zathura-pdf-poppler ; then
-				echo "Installing dependencies via ${package_manager} : zathura-pdf-poppler"
-				sudo apt install -y zathura-pdf-poppler > /dev/null || exit 1
-			fi
+			sudo apt install -y "${dependencies}" > /dev/null || exit 1
 		;;
 		dnf)
-			if ! dnf list installed | grep -q zathura-pdf-poppler ; then
-				echo "Installing dependencies via ${package_manager} : zathura-pdf-poppler"
-				sudo dnf install -y zathura-pdf-poppler > /dev/null  || exit 1
-			fi
+			sudo dnf install -y "${dependencies}" "${extra_dependencies}" > /dev/null || exit 1
 		;;
 		pacman)
-			if ! pacman -Q | grep -q zathura-pdf-poppler ; then
-				echo "Installing dependencies via ${package_manager} : zathura-pdf-poppler"
-				sudo pacman -S --noconfirm zathura-pdf-poppler > /dev/null || exit 1
-			fi
+			sudo pacman -S --noconfirm --needed "${dependencies}" > /dev/null || exit 1
 		;;
 		emerge)
-			if ! qlist -I | grep -q zathura-pdf-poppler ; then
-				echo "Installing dependencies via ${package_manager} : zathura-pdf-poppler"
-				sudo emerge zathura-pdf-poppler > /dev/null || exit 1
-			fi
+			sudo emerge "${dependencies}" > /dev/null || exit 1
 		;;
 	esac
-
-
-	if ! command -v dmenu > /dev/null ; then
-		echo "Installing dependencies via ${package_manager} : dmenu"
-		
-		case "${package_manager}" in
-			apt)
-				sudo apt install -y suckless-tools > /dev/null || exit 1
-			;;
-			dnf)
-				sudo dnf install -y dmenu > /dev/null || exit 1
-			;;
-			pacman)
-				sudo pacman -S --noconfirm dmenu > /dev/null || exit 1
-			;;
-			emerge)
-				sudo emerge dmenu > /dev/null || exit 1
-			;;
-		esac
-	fi
 
 	curl -Ls "${url}/archive/v${latest_release}.tar.gz" -o "/tmp/${pkgname}-${latest_release}.tar.gz" || { echo -e >&2 "An error occured during the download of the ${pkgname}'s archive\n\nPlease, verify that you have a working internet connexion and curl installed on your machine\nIf the problem persists anyway, you can open an issue at ${url}/issues" ; exit 1; }
 
