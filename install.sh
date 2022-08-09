@@ -17,21 +17,22 @@ package() {
 	if [ -z "${package_manager}" ]; then
 		echo -e "\nThis script only supports the following package manager to handle dependencies :\napt\ndnf\npacman\nemerge\n\nYour package manager is not supported\nYou'll need to install the following packages yourself to make \"zaman\" work correctly (if you don't have them installed already) :\n${dependencies}"
 	else
-		echo -e "\nChecking and installing the following dependencies via ${package_manager} :\n${dependencies}\n+ ${extra_dependencies} for RedHat/Fedora based distros."
+		echo -e "\nChecking and installing the following dependencies via ${package_manager} :\n${dependencies}"
 	fi
 
 	case "${package_manager}" in
 		apt)
-			sudo apt install -y "$(echo "${dependencies}")" > /dev/null || exit 1
+			sudo apt install -y $(echo "${dependencies}") > /dev/null || exit 1
 		;;
 		dnf)
-			sudo dnf install -y "$(echo "${dependencies}" "${extra_dependencies}")" > /dev/null || exit 1
+			echo -e "\nAlso installing the following extra dependencies for RedHat/Fedora based distros :\n${extra_dependencies}"
+			sudo dnf install -y $(echo "${dependencies}" "${extra_dependencies}") > /dev/null || exit 1
 		;;
 		pacman)
-			sudo pacman -S --noconfirm --needed "$(echo "${dependencies}")" > /dev/null || exit 1
+			sudo pacman -S --noconfirm --needed $(echo "${dependencies}") > /dev/null || exit 1
 		;;
 		emerge)
-			sudo emerge "$(echo "${dependencies}")" > /dev/null || exit 1
+			sudo emerge $(echo "${dependencies}") > /dev/null || exit 1
 		;;
 	esac
 
