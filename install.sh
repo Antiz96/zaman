@@ -22,16 +22,16 @@ package() {
 
 	case "${package_manager}" in
 		apt)
-			sudo apt install -y "${dependencies}" > /dev/null || exit 1
+			sudo apt install -y "\"${dependencies}\"" > /dev/null || exit 1
 		;;
 		dnf)
-			sudo dnf install -y "${dependencies}" "${extra_dependencies}" > /dev/null || exit 1
+			sudo dnf install -y "\"${dependencies}\"" "\"${extra_dependencies}\"" > /dev/null || exit 1
 		;;
 		pacman)
-			sudo pacman -S --noconfirm --needed "${dependencies}" > /dev/null || exit 1
+			sudo pacman -S --noconfirm --needed "\"${dependencies}\"" > /dev/null || exit 1
 		;;
 		emerge)
-			sudo emerge "${dependencies}" > /dev/null || exit 1
+			sudo emerge "\"${dependencies}\"" > /dev/null || exit 1
 		;;
 	esac
 
