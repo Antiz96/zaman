@@ -10,7 +10,7 @@ current_version=$("${pkgname}" -v 2>/dev/null)
 package() {
 
 	dependencies="groff zathura zathura-pdf-poppler dmenu"
-	extra_dependencies="groff-perl \"perl(Compress::Zlib)\""
+	extra_dependencies=(groff-perl "perl(Compress::Zlib)")
 
 	package_manager=$( (ls /usr/bin/apt || ls /usr/bin/dnf || ls /usr/bin/pacman || ls /usr/bin/emerge) 2>/dev/null | awk -F/ '{print $4}' )
 	
@@ -25,8 +25,8 @@ package() {
 			sudo apt install -y ${dependencies} > /dev/null || exit 1
 		;;
 		dnf)
-			echo -e "\nAlso installing the following extra dependencies for RedHat/Fedora based distros :\n${extra_dependencies}"
-			sudo dnf install -y ${dependencies} ${extra_dependencies} > /dev/null || exit 1
+			echo -e "\nAlso installing the following extra dependencies for RedHat/Fedora based distros :\n" "${extra_dependencies[@]}"
+			sudo dnf install -y ${dependencies} "${extra_dependencies[@]}" > /dev/null || exit 1
 		;;
 		pacman)
 			sudo pacman -S --noconfirm --needed ${dependencies} > /dev/null || exit 1
