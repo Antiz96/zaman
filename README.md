@@ -46,7 +46,7 @@ curl -s https://raw.githubusercontent.com/Antiz96/zaman/main/uninstall.sh | bash
 ## Dependencies
 
 Zaman depends on [groff](https://www.gnu.org/software/groff/) to convert man pages into PDF format, [zathura](https://pwmt.org/projects/zathura/) (and zathura-pdf-poppler) to print the PDF file and [dmenu](https://tools.suckless.org/dmenu/) to display the list of available man pages.  
-For RedHat/Fedora based distros, it also depends on "groff-perl" and the "zlib" library for perl : "perl(Compress::Zlib).
+For RedHat/Fedora based distros, it also depends on "groff-perl" and the "zlib" library for perl : "perl(Compress::Zlib)".
 
 ## Usage
 
