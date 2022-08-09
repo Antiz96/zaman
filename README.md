@@ -68,7 +68,7 @@ Alternatively, you can specify the man page to open directly in the command (exa
 
 ![zaman_with_argument](https://user-images.githubusercontent.com/53110319/183697495-25951c0d-fc93-4606-a9bf-712739272460.png)
 
-The man page will open in fullscreen as a PDF file in [Zathura](https://pwmt.org/projects/zathura/) :  
+The man page will open in fullscreen as a PDF file in [Zathura](https://pwmt.org/projects/zathura/) (which has vim keys and mousewheel support). Just press "q" to quit, as you would normally do when reading a man page :  
 
 ![zaman_ls](https://user-images.githubusercontent.com/53110319/183697494-2c268494-64cd-414f-a942-cac7a87580ba.png)
 
