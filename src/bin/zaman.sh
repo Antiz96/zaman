@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Current version
-version="1.0.0"
+version="1.0.1"
 
 #Replace the $1 var by "option" just to make the script more readable/less complex
 option="${1}"
