@@ -21,4 +21,4 @@ uninstall:
 	rm -rf "${DESTDIR}${PREFIX}/share/doc/${pkgname}/"
 
 test:
-	src/script/${pkgname}.sh --help
+	"src/script/${pkgname}.sh" --help
