@@ -1,0 +1,55 @@
+.TH "ZAMAN" "1" "September 2022" "Zaman v1" "Zaman Manual"
+
+.SH NAME
+zaman \- A simple tool that prints man pages in a PDF file (with vim keys support) for an easier reading.
+
+.SH SYNOPSIS
+.B zaman
+[\fI\,OPTION\/\fR] [\fI\,MAN PAGE\/\fR]
+
+.SH DESCRIPTION
+A simple tool that prints man pages in a PDF file (with vim keys support) via Zathura for an easier reading. It also allows you to select the man page to display through a list of all the available man pages on your system via Dmenu.
+
+.SH OPTIONS
+.PP
+.RB "If no option is passed, print the list of all the available man pages on the system, allowing you to search and select the one to print as a PDF."
+.br
+.br
+.RB "You can also specify the man page to open directly in the command :"
+.br
+.RB "zaman 'man page to open', ie: zaman ls"
+.PP
+
+.TP
+.B \-v, \-\-version
+Print the current version
+
+.TP
+.B \-h, \-\-help
+Print the help
+
+.SH EXIT STATUS
+.TP
+.B 0
+if OK
+
+.TP
+.B 1
+if problems (user tried to open a non-existing man page...)
+
+.SH SEE ALSO
+.BR zathura (1),
+.BR dmenu (1),
+.BR groff (1),
+.BR echo (1),
+.BR grep (1),
+.BR man (1),
+.BR col (1),
+.br
+The documentation is also available on the GitHub page https://github.com/Antiz96/zaman
+
+.SH BUGS
+Please report bugs to the GitHub page https://github.com/Antiz96/zaman
+
+.SH AUTHOR
+Robin Candau <robincandau@protonmail.com>
