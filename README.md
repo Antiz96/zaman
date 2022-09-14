@@ -140,4 +140,3 @@ if problems (user tried to open a non-existing man page...)
 
 You can raise your issues, feedbacks and ideas in the [issues tab](https://github.com/Antiz96/zaman/issues).  
 [Pull requests](https://github.com/Antiz96/zaman/pulls) are welcomed as well !
-:smile:
