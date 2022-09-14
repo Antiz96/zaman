@@ -2,7 +2,7 @@ pkgname=zaman
 
 PREFIX ?= /usr/local
 
-.PHONY: all install uninstall check
+.PHONY: all check install uninstall
 
 all:
 
