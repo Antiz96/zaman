@@ -22,9 +22,10 @@ Zaman depends on:
 - [groff](https://www.gnu.org/software/groff/) to convert man pages into PDF format
 - [zathura](https://pwmt.org/projects/zathura/) and `zathura-pdf-poppler` to print the PDF file 
 - [dmenu](https://tools.suckless.org/dmenu/) to display the list of available man pages   
+  
 For **RedHat/Fedora** based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.  
   
-The [make](https://www.gnu.org/software/make/) package is necessary to [install/uninstall zaman from source](#from source).
+The [make](https://www.gnu.org/software/make/) package is necessary to [install/uninstall zaman from source](#from-source).
 
 ### Installing dependencies
 
