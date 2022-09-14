@@ -43,7 +43,7 @@ sudo dnf install make man-db groff groff-perl "perl(Compress::Zlib)" zathura zat
 
 #### Arch Linux
 
-*You don't need to install dependencies if you install `zaman` via the [AUR package](https://aur.archlinux.org/packages/zaman) as it already takes care of them*
+*You don't need to install dependencies if you install `zaman` via the [AUR](#aur) as it already takes care of them*
 
 ```
 sudo pacman -S make man-db groff zathura zathura-pdf-poppler dmenu
