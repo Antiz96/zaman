@@ -12,7 +12,7 @@ check:
 install:
 	install -Dm 755 "src/script/${pkgname}.sh" "${DESTDIR}/${PREFIX}/bin/${pkgname}"
 	
-	gzip -c doc/man/${pkgname}.1 > ${pkgname}.1.gz
+	gzip -c "doc/man/${pkgname}.1" > "${pkgname}.1.gz"
 	install -Dm 644 "${pkgname}.1.gz" "${DESTDIR}/${PREFIX}/share/man/man1/${pkgname}.1.gz"
 	rm -f "${pkgname}.1.gz"
 	
