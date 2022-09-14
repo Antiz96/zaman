@@ -38,7 +38,7 @@ sudo apt install make man-db groff zathura zathura-pdf-poppler suckless-tools
 #### RedHat/Fedora
 
 ```
-sudo dnf install make man-db groff groff-perl perl(Compress::Zlib) zathura zathura-pdf-poppler dmenu
+sudo dnf install make man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-pdf-poppler dmenu
 ```
 
 #### Arch Linux
