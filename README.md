@@ -25,7 +25,7 @@ Zaman depends on:
   
 For **RedHat/Fedora** based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.  
   
-The [make](https://www.gnu.org/software/make/) package is necessary to [install/uninstall zaman from source](#from-source).
+The [make](https://www.gnu.org/software/make/) package is necessary to install/uninstall `zaman` [from source](#from-source).
 
 ### Installing dependencies
 
