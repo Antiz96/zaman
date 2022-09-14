@@ -17,8 +17,13 @@ It also allows you to select the man page to display through a list of all the a
 
 ## Dependencies
 
-Zaman depends on [man-db](http://man-db.nongnu.org/) (to get the man pages), [groff](https://www.gnu.org/software/groff/) (to convert man pages into PDF format), [zathura](https://pwmt.org/projects/zathura/) and `zathura-pdf-poppler` (to print the PDF file) and [dmenu](https://tools.suckless.org/dmenu/) (to display the list of available man pages).  
-For RedHat/Fedora based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.
+Zaman depends on:
+- [man-db](http://man-db.nongnu.org/) to get the man pages
+- [groff](https://www.gnu.org/software/groff/) to convert man pages into PDF format
+- [zathura](https://pwmt.org/projects/zathura/) and `zathura-pdf-poppler` to print the PDF file 
+- [dmenu](https://tools.suckless.org/dmenu/) (to display the list of available man pages)   
+   
+For **RedHat/Fedora** based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.
 
 ### Installing dependencies
 
@@ -72,7 +77,7 @@ sudo make uninstall
 
 ## Usage
 
-Simply run the `zaman` command in your terminal to open the menu list of all the man pages available on your system, allowing you to search and select the man page you want to read.  
+Simply run the `zaman` command in your terminal to open the menu list of all the available man pages on your system, allowing you to search and select the man page you want to read.  
 You can also specify the man page to open directly in the command, like so:  
 ```
 zaman ls
@@ -99,7 +104,7 @@ The man page will open in fullscreen as a PDF file in [Zathura](https://pwmt.org
 See the documentation below:
 
 *The documentation is also available as a man page and with the "--help" function.*  
-*Run `man zaman` or `zaman --help` ( or even `zaman zaman` actually :) ) after you've installed the **zaman** package.*  
+*Run `man zaman` or `zaman --help` (or even `zaman zaman` actually :smile:) after you've installed the **zaman** package.*  
     
 ### SYNOPSIS
 zaman [OPTION] [MAN PAGE TO DISPLAY]
@@ -133,5 +138,5 @@ if problems (user tried to open a non-existing man page...)
 
 ## Contributing
 
-You can raise your issues, feedbacks and ideas in the [issues tab](https://github.com/Antiz96/zaman/issues).
+You can raise your issues, feedbacks and ideas in the [issues tab](https://github.com/Antiz96/zaman/issues).  
 [Pull requests](https://github.com/Antiz96/zaman/pulls) are welcomed as well !
