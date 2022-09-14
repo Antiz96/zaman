@@ -70,7 +70,6 @@ To install `zaman`, go into the extracted/cloned directory and run the following
 ```
 sudo make install
 ```
-*To update `zaman`, you'll need to redo the above steps at each new releases*  
    
 To uninstall `zaman`, go into the extracted/cloned directory and run the following command:  
 ```
