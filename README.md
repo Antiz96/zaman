@@ -31,13 +31,13 @@ The [make](https://www.gnu.org/software/make/) package is necessary to [install/
 #### Debian/Ubuntu
 
 ```
-sudo apt install man-db groff zathura zathura-pdf-poppler suckless-tools
+sudo apt install make man-db groff zathura zathura-pdf-poppler suckless-tools
 ```
 
 #### RedHat/Fedora
 
 ```
-sudo dnf install man-db groff groff-perl perl(Compress::Zlib) zathura zathura-pdf-poppler dmenu
+sudo dnf install make man-db groff groff-perl perl(Compress::Zlib) zathura zathura-pdf-poppler dmenu
 ```
 
 #### Arch Linux
@@ -45,13 +45,13 @@ sudo dnf install man-db groff groff-perl perl(Compress::Zlib) zathura zathura-pd
 *You don't need to install dependencies if you install `zaman` via the [AUR package](https://aur.archlinux.org/packages/zaman) as it already takes care of them*
 
 ```
-sudo pacman -S man-db groff zathura zathura-pdf-poppler dmenu
+sudo pacman -S make man-db groff zathura zathura-pdf-poppler dmenu
 ```
 
 #### Gentoo
 
 ```
-sudo emerge man-db groff zathura zathura-pdf-poppler dmenu
+sudo emerge make man-db groff zathura zathura-pdf-poppler dmenu
 ```
 
 ## Installation
