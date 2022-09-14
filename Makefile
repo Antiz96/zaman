@@ -2,12 +2,9 @@ pkgname=zaman
 
 PREFIX ?= /usr/local
 
-.PHONY: all check install uninstall
+.PHONY: all install uninstall
 
 all:
-
-check:
-	src/script/${pkgname}.sh --help
 
 install:
 	install -Dm 755 "src/script/${pkgname}.sh" "${DESTDIR}/${PREFIX}/bin/${pkgname}"
@@ -22,3 +19,6 @@ uninstall:
 	rm -f "${DESTDIR}/${PREFIX}/bin/${pkgname}"
 	rm -f "${DESTDIR}/${PREFIX}/share/man/man1/${pkgname}.1.gz"
 	rm -rf "${DESTDIR}/${PREFIX}/share/doc/${pkgname}/"
+
+test:
+	src/script/${pkgname}.sh --help
