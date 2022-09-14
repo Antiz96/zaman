@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Current version
-version="1.0.1"
+version="1.0.2"
 
 #Replace the $1 var by "option" just to make the script more readable/less complex
 option="${1}"
@@ -29,7 +29,7 @@ else
 			exit 0
 		;;
 		#If the -h (or --help) option is passed to the "zaman" command, print the documentation (man page)
-		#The documentation is also readable here https://github.com/Antiz96/zaman/blob/main/README.md or by typing the following command in a terminal : man zaman
+		#The documentation is also readable here https://github.com/Antiz96/zaman or by typing the following command in a terminal : man zaman
 		-h|--help)
 			#Print the documentation (man page) and quit
 			man zaman | col
