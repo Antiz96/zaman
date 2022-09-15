@@ -108,9 +108,11 @@ See the documentation below:
 *Run `man zaman` or `zaman --help` (or even `zaman zaman` actually :smile:) after you've installed the **zaman** package.*  
     
 ### SYNOPSIS
+
 zaman [OPTION] [MAN PAGE TO DISPLAY]
 
 ### DESCRIPTION
+
 A simple tool that prints man pages in a PDF file (with vim keys support) via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
 It also allows you to select the man page to display through a list of all the available man pages on your system via [Dmenu](https://tools.suckless.org/dmenu/).
 
@@ -124,17 +126,21 @@ zaman ls
 ```
 
 #### -v, -version
+
 Print the current version
 
 #### -h, --help
+
 Print the help
 
 ### EXIT STATUS
 
 #### 0
+
 if OK
 
 #### 1
+
 if problems (user tried to open a non-existing man page...)
 
 ## Contributing
