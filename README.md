@@ -25,20 +25,20 @@ Zaman depends on:
   
 For **RedHat/Fedora** based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.  
   
-The [make](https://www.gnu.org/software/make/) package is necessary to install/uninstall `zaman` [from source](#from-source).
+The [make](https://www.gnu.org/software/make/) package is necessary to install/uninstall `zaman`, install it via your package manager if needed.
 
 ### Installing dependencies
 
 #### Debian/Ubuntu
 
 ```
-sudo apt install make man-db groff zathura zathura-pdf-poppler suckless-tools
+sudo apt install man-db groff zathura zathura-pdf-poppler suckless-tools
 ```
 
 #### RedHat/Fedora
 
 ```
-sudo dnf install make man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-pdf-poppler dmenu
+sudo dnf install man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-pdf-poppler dmenu
 ```
 
 #### Arch Linux
@@ -46,13 +46,13 @@ sudo dnf install make man-db groff groff-perl "perl(Compress::Zlib)" zathura zat
 *You don't need to install dependencies if you install `zaman` via the [AUR](#aur) as it already takes care of them*
 
 ```
-sudo pacman -S make man-db groff zathura zathura-pdf-poppler dmenu
+sudo pacman -S man-db groff zathura zathura-pdf-poppler dmenu
 ```
 
 #### Gentoo
 
 ```
-sudo emerge make man-db groff zathura zathura-pdf-poppler dmenu
+sudo emerge man-db groff zathura zathura-pdf-poppler dmenu
 ```
 
 ## Installation
