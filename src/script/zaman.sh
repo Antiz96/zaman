@@ -29,8 +29,8 @@ else
 		;;
 		#If the -o (or --output) option is passed to the "zaman" command, save the output to the specified file
 		-o|--output)
-			man_selected="${3}"
-			file="${4}"
+			man_selected="${2}"
+			file="${3}"
 			 
 			if man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$ ; then
 				#If the specified file does not exists, create it and redirect output to it
@@ -62,7 +62,7 @@ else
 		;;
 		#If the -O (or --save) option is passed to the "zaman" command, save the output to a local file named "man_<command>.pdf"
 		-O|--save)
-			man_selected="${3}"
+			man_selected="${2}"
 			
 			#If the man page to save hasn't been specified by the user, print the list of available man pages through "dmenu" and save the selected one to a PDF file
 			if [ -z "${man_selected}" ]; then
