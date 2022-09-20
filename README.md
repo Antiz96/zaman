@@ -135,11 +135,13 @@ zaman -o ls ~/Documents/man/ls.pdf
 #### -O, --save
 
 Write output to a local file named "man_`command`.pdf". Useful to quickly save the PDF converted man page to a local file:
+  
+You can either select the man page to save as a PDF file via the dmenu list:
 ```
-zaman -O #then selecting the desired man page to save as a PDF file through the dmenu list
+zaman -O
 ```
   
-You can also specify the desired man page to save as a PDF file directly in the command:
+Or you can specify the man page to save as a PDF file directly in the command:
 ```
 zaman -O ls
 ``` 
