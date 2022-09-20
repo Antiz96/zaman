@@ -74,7 +74,7 @@ else
 				#If the "man_<command>.pdf" file does not exists, create it and redirect output to it
 				if [ ! -f "${file}" ]; then
 					man -Tpdf "${man_selected}" > "${file}"
-					echo "The man page has been saved to the \"${file}\" file"
+					echo "The man page has been saved in the \"${file}\" file"
 					exit 0
 				#If the specified file already exists, ask for the user's confirmation to overwrite its content
 				else
