@@ -125,7 +125,21 @@ You can also specify the man page to open directly in the command:
 zaman ls
 ```
 
-#### -v, -version
+#### -o, --output "file"
+
+Write output to "file". Useful to save the PDF converted man page to a file of your choice:
+```
+zaman -o ls ~/Documents/man/ls.pdf
+```
+
+#### -O, --save
+
+Write output to a local file named "man_`command`.pdf". Useful to quickly save the PDF converted man page to a local file:
+```
+zaman -O ls
+``` 
+
+#### -v, --version
 
 Print the current version
 
