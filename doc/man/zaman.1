@@ -21,7 +21,7 @@ A simple tool that prints man pages in a PDF file (with vim keys support) via Za
 .PP
 
 .TP
-.B \-o, \-\-output
+.B \-o, \-\-output <file>
 Write output to "file". Useful to save the PDF converted man page to a file of your choice:
 .br
 e.g.: "zaman -o ls ~/Documents/man/ls.pdf"
@@ -30,11 +30,9 @@ e.g.: "zaman -o ls ~/Documents/man/ls.pdf"
 .B \-O, \-\-save
 Write output to a local file named "man_<command>.pdf". Useful to quickly save the PDF converted man page to a local file:
 .br
-.br
 You can either select the man page to save as a PDF file via the dmenu list:
 .br
 e.g.: "zaman -O"
-.br
 .br
 Or you can specify the man page to save as a PDF file directly in the command:
 .br
