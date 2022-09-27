@@ -3,6 +3,7 @@
 A simple tool that prints man pages in a PDF file (with vim keys support) for an easier reading.
 
 ## Table of contents
+
 * [Description](#description)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
