@@ -12,7 +12,7 @@ A simple tool that prints man pages in a PDF file (with vim keys support) for an
 
 ## Description
 
-A simple tool that prints man pages in a PDF file via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
+A simple tool that prints (or saves) man pages in a PDF file via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
 It also allows you to navigate through all the man pages available on your system via [Dmenu](https://tools.suckless.org/dmenu/).
 
 ## Installation
