@@ -150,7 +150,7 @@ if OK
 
 #### 1
 
-if problems (user tried to open a non-existing man page, user does not have any dynamic menu installed, ...)
+if problems (user tried to open a non-existing man page, user does not have any dynamic menu installed, user did not specify a man page or a file path when using the output option...)
 
 ## Contributing
 
