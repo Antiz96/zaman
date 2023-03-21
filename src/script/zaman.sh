@@ -42,7 +42,7 @@ else
 
 			#If the user didn't specified a man page or a file path, print an error and exit
 			if [ -z "${man_selected}" ] || [ -z "${file}" ]; then
-				echo -e >&2 "Please, specify a man page to export and a file to save it to:\nzaman -o man_page /path/to/file"
+				echo >&2 "Please, specify a man page to export and a file to save it to: zaman -o man_page /path/to/file"
 				exit 1
 			fi
 		
