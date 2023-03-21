@@ -12,8 +12,9 @@ else
 	option="${1}"
 
 	case "${option}" in
-		#If no option is passed to the "zaman" command, print the list of available man pages through "rofi" or "dmenu"
+		#If no option is passed to the "zaman" command, show the list of available man pages and print the selected one as a PDF
 		"")
+			#Print the list of available man pages through "rofi" or "dmenu"
 			if command -v rofi > /dev/null; then
 				man_selected=$(man -k . | awk '{print $1}' | rofi -dmenu -sort)
 			elif command -v dmenu > /dev/null; then
@@ -38,7 +39,14 @@ else
 		-o|--output)
 			man_selected="${2}"
 			file="${3}"
-			
+
+			#If the user didn't specified a man page or a file path, print an error and exit
+			if [ -z "${man_selected}" ] || [ -z "${file}" ]; then
+				echo -e >&2 "Please, specify a man page to export and a file to save it to:\nzaman -o man_page /path/to/file"
+				exit 1
+			fi
+		
+			#If the specified man page exists, save it to the specified file 
 			if man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$ ; then
 				#If the specified file does not exists, create it and save the specified man page rendered as a PDF in it
 				if [ ! -f "${file}" ]; then
