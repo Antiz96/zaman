@@ -69,22 +69,23 @@ sudo make uninstall
 
 Run the `zaman` command in your terminal to display a list of all the available man pages on your system (via [Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/)), allowing you to search for the one to print as a PDF.  
 
-![zaman](https://user-images.githubusercontent.com/53110319/183697489-cd2b8c1e-334c-42f3-be8d-2c0b4a7e002c.png)
+![zaman](https://user-images.githubusercontent.com/53110319/226755165-3080f232-cb9f-4d5b-aa06-b18032cd8eaa.png)
 
 Alternatively, you can directly specify the man page to open in the command (example below with the "ls" man page):  
 
-![zaman_with_argument](https://user-images.githubusercontent.com/53110319/183697495-25951c0d-fc93-4606-a9bf-712739272460.png)
+![zaman_cmd](https://user-images.githubusercontent.com/53110319/226755190-9d005cbe-b893-4b96-b6c1-db97a70f3a4b.png)
 
 The man page will open in fullscreen as a PDF file in [Zathura](https://pwmt.org/projects/zathura/). Just press `q` to quit, as you would normally do when reading a man page:  
 
-![zaman_ls](https://user-images.githubusercontent.com/53110319/183697494-2c268494-64cd-414f-a942-cac7a87580ba.png)
+![zaman_pdf](https://user-images.githubusercontent.com/53110319/226755232-e8cdadd6-e0a4-473b-857e-3b3273f4ad0f.png)
 
-You can save a specific man page in a PDF file called "man_<command>.pdf" in your current directory with the `-O` (or `--save`) option:  
+You can save a specific man page in a PDF file called "man_`command`.pdf" in your current directory with the `-O` (or `--save`) option *(if you run `zaman -O` without specifying a man page to save, `zaman` will offer you to select one via rofi/dmenu)*:  
 
+![zaman_save](https://user-images.githubusercontent.com/53110319/226755247-637c4827-9940-43e4-88e9-4978152e4cc4.png)
 
+Alternatively, you can specify the destination file with the `-o` (or `--output`) option:  
 
-Or, you can specify the destination file with the `-o` (or `--output`) option:  
-
+![zaman_output](https://user-images.githubusercontent.com/53110319/226755261-cb4bf006-fae3-48ea-8187-8c4e1772b7b0.png)
 
 
 ## Documentation
