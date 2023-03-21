@@ -5,7 +5,6 @@ A simple tool that prints man pages in a PDF file (with vim keys support) for an
 ## Table of contents
 
 * [Description](#description)
-* [Dependencies](#dependencies)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Documentation](#documentation)
@@ -13,22 +12,21 @@ A simple tool that prints man pages in a PDF file (with vim keys support) for an
 
 ## Description
 
-A simple tool that prints man pages in a PDF file (with vim keys support) via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
-It also allows you to select the man page to display through a list of all the available man pages on your system via [Dmenu](https://tools.suckless.org/dmenu/).
+A simple tool that prints (or saves) man pages in a PDF file via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
+It also allows you to navigate through all the man pages available on your system via [Dmenu](https://tools.suckless.org/dmenu/).
 
-## Dependencies
+## Installation
 
-Zaman depends on:
-- [man-db](http://man-db.nongnu.org/) to get the man pages
-- [groff](https://www.gnu.org/software/groff/) to convert man pages into PDF format
-- [zathura](https://pwmt.org/projects/zathura/) and `zathura-pdf-poppler` to print the PDF file 
-- [dmenu](https://tools.suckless.org/dmenu/) to display the list of available man pages   
+### AUR
+
+Install the [zaman](https://aur.archlinux.org/packages/zaman) AUR package.  
+Make sure you also have a zathura PDF backend installed (either [zathura-pdf-poppler](https://archlinux.org/packages/community/x86_64/zathura-pdf-poppler/) or [zathura-pdf-mupdf](https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/)).
+
+### From Source
+
+Install dependencies:  
   
-For **RedHat/Fedora** based distros, it also depends on `groff-perl` and `perl(Compress::Zlib)`.  
-  
-The [make](https://www.gnu.org/software/make/) package is necessary to install/uninstall `zaman`, install it via your package manager if needed.
-
-### Installing dependencies
+- Replace `zathura-pdf-poppler` by `zathura-pdf-mupdf` if you prefer to use the `mupdf` backend.
 
 #### Debian/Ubuntu
 
@@ -44,8 +42,6 @@ sudo dnf install man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-
 
 #### Arch Linux
 
-*You don't need to install dependencies if you install `zaman` via the [AUR](#aur) as it already takes care of them*
-
 ```
 sudo pacman -S man-db groff zathura zathura-pdf-poppler dmenu
 ```
@@ -55,17 +51,8 @@ sudo pacman -S man-db groff zathura zathura-pdf-poppler dmenu
 ```
 sudo emerge man-db groff zathura zathura-pdf-poppler dmenu
 ```
-
-## Installation
-
-### AUR
-
-Arch (or Arch based distro) users can install the [zaman](https://aur.archlinux.org/packages/zaman "zaman AUR package") AUR package.
-
-### From Source
-
-After [installing dependencies](#installing-dependencies) on your system, download the archive of the [latest stable release](https://github.com/Antiz96/zaman/releases/latest) and extract it.  
-*Alternatively, you can clone this repository via `git`.*  
+  
+Download the archive of the [latest stable release](https://github.com/Antiz96/zaman/releases/latest) and extract it *(alternatively, you can clone this repository via `git`)*.  
   
 To install `zaman`, go into the extracted/cloned directory and run the following command:
 ```
@@ -78,16 +65,6 @@ sudo make uninstall
 ```
 
 ## Usage
-
-Simply run the `zaman` command in your terminal to open the menu list of all the available man pages on your system, allowing you to search and select the man page you want to read.  
-You can also specify the man page to open directly in the command, like so:  
-```
-zaman ls
-```
-  
-Check the screenshots below for more information.
-
-### Screenshot
 
 Run the `zaman` command in your terminal to display a list/menu in which you can navigate through all the available man pages on your system with your keyboard (up and down arrow keys and type search):    
 
@@ -168,4 +145,4 @@ if problems (user tried to open a non-existing man page...)
 ## Contributing
 
 You can raise your issues, feedbacks and suggestions in the [issues tab](https://github.com/Antiz96/zaman/issues).  
-[Pull requests](https://github.com/Antiz96/zaman/pulls) are welcomed as well !
+[Pull requests](https://github.com/Antiz96/zaman/pulls) are welcomed as well!
