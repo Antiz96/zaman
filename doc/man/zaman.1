@@ -1,40 +1,40 @@
-.TH "ZAMAN" "1" "September 2022" "Zaman v1" "Zaman Manual"
+.TH "ZAMAN" "1" "March 2023" "Zaman v1" "Zaman Manual"
 
 .SH NAME
-zaman \- A simple tool that prints man pages in a PDF file (with vim keys support) for an easier reading.
+zaman \- A simple tool that prints (or saves) man pages in a PDF file for an easier reading.
 
 .SH SYNOPSIS
 .B zaman
 [\fI\,OPTION\/\fR] [\fI\,MAN PAGE\/\fR]
 
 .SH DESCRIPTION
-A simple tool that prints man pages in a PDF file (with vim keys support) via Zathura for an easier reading. It also allows you to select the man page to display through a list of all the available man pages on your system via Dmenu.
+A simple tool that prints (or saves) man pages in a PDF file via Zathura for an easier reading. It also allows you to navigate through all the man pages available on your system via Rofi or Dmenu.
 
 .SH OPTIONS
 .PP
-.RB "If no option is passed, print the list of all the available man pages on the system, allowing you to search and select the one to print as a PDF."
+.RB "If no option is passed, print the list of all the available man pages on the system in a dynamic menu (rofi or dmenu); allowing you to search for the one to print as a PDF."
 .br
 .br
-.RB "You can also specify the man page to open directly in the command :"
+.RB "Alternatively, you can directly specify the man page to open in the command:"
 .br
 .RB "zaman 'man page to open', e.g.: zaman ls"
 .PP
 
 .TP
 .B \-o, \-\-output <file>
-Write output to "file". Useful to save the PDF converted man page to a file of your choice:
+Write the output to "file". Useful to save the PDF converted man page to a file of your choice:
 .br
 e.g.: "zaman -o ls ~/Documents/man/ls.pdf"
 
 .TP
 .B \-O, \-\-save
-Write output to a local file named "man_<command>.pdf". Useful to quickly save the PDF converted man page to a local file:
+Write the output to a PDF file named "man_<command>.pdf" inside your current directory. Useful to quickly save the PDF converted man page to a file:
 .br
-You can either select the man page to save as a PDF file via the dmenu list:
+You can either select the man page to save as a PDF file via the rofi/dmenu list:
 .br
 e.g.: "zaman -O"
 .br
-Or you can specify the man page to save as a PDF file directly in the command:
+Or you can directly specify the man page to save as a PDF file in the command:
 .br
 e.g.: "zaman -O ls"
 
@@ -53,10 +53,11 @@ if OK
 
 .TP
 .B 1
-if problems (user tried to open a non-existing man page...)
+if problems (user tried to open a non-existing man page, user does not have any dynamic menu installed, ...)
 
 .SH SEE ALSO
 .BR zathura (1),
+.BR rofi (1),
 .BR dmenu (1),
 .BR groff (1),
 .BR echo (1),
