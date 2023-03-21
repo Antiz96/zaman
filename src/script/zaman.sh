@@ -53,7 +53,7 @@ else
 					case "${answer}" in
 						[Yy])
 							man -Tpdf "${man_selected}" > "${file}"
-							echo "The ${man_selected} man page has been saved to the ${file} file"
+							echo -e "\nThe ${man_selected} man page has been saved to the ${file} file"
 							exit 0
 						;;
 						*)
@@ -101,7 +101,7 @@ else
 					case "${answer}" in
 						[Yy])
 							man -Tpdf "${man_selected}" > "${file}"
-							echo "The ${man_selected} man page has been saved to the ${file} file"
+							echo -e "\nThe ${man_selected} man page has been saved to the ${file} file"
 							exit 0
 						;;
 						*)
