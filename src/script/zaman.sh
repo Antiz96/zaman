@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Current version
-version="1.1.0"
+version="1.2.0"
 
 #If the argument passed to the "zaman" command matches an available man page, print it to a PDF file via "zathura"
 if man -k . | awk '{print $1}' | grep -iq ^"${1}"$ ; then
