@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Current version
-version="1.2.0"
+version="1.2.1"
 
 #If the argument passed to the "zaman" command matches an available man page, print it to a PDF file via "zathura"
 if man -k . | awk '{print $1}' | grep -iq ^"${1}"$ ; then
-	man -Tpdf "${1}" | zathura -
+	man -Tpdf "${1}" | zathura - &
 	exit 0
 else
 	#If the argument passed to the "zaman" command does not match an available man page, rename the $1 var to "option" just to make the script more readable/less complex
@@ -26,7 +26,7 @@ else
 			
 			#If the selected/inputted man page exists, print it to a PDF file via "zathura"
 			if man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$ ; then
-				man -Tpdf "${man_selected}" | zathura -
+				man -Tpdf "${man_selected}" | zathura - &
 				exit 0
 			#If the selected/inputted man page does not exists, print an error
 			else
