@@ -77,7 +77,7 @@ Alternatively, you can directly specify the man page to open in the command (exa
 
 The man page will open as a PDF file in [Zathura](https://pwmt.org/projects/zathura/). Just press `q` to quit, as you would normally do when reading a man page:  
 
-![zaman_pdf](https://user-images.githubusercontent.com/53110319/226755232-e8cdadd6-e0a4-473b-857e-3b3273f4ad0f.png)
+![zaman_pdf](https://github.com/Antiz96/zaman/assets/53110319/fca2f8a7-c428-47f9-a1cd-e3dd295ce3ca)
 
 You can save a specific man page in a PDF file called "man_`command`.pdf" in your current directory with the `-O` (or `--save`) option *(if you run `zaman -O` without specifying a man page to save, `zaman` will offer you to select one via rofi/dmenu)*:  
 
