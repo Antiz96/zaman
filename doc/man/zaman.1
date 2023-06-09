@@ -50,11 +50,23 @@ Print the help
 .SH EXIT STATUS
 .TP
 .B 0
-if OK
+OK
 
 .TP
 .B 1
-if problems (user tried to open a non-existing man page, user does not have any dynamic menu installed, user did not specify a man page or a file path when using the output option...)
+Invalid option or man page
+
+.TP
+.B 2
+Neither `rofi` nor `dmenu` are installed
+
+.TP
+.B 3
+User didn't gave the confirmation to proceed
+
+.TP
+.B 4
+User didn't specified a man page or a file to save it to in the -o/--output option
 
 .SH SEE ALSO
 .BR zathura (1),
