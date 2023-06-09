@@ -6,7 +6,7 @@
 
 # Variables definition
 name="zaman"
-version="1.2.1"
+version="1.2.2"
 option="${1}"
 man_selected="${2}"
 file="${3}"
@@ -43,7 +43,7 @@ invalid_option() {
 	exit 1
 }
 
-# Definition of the check_man_page function: Check if "${man_selected}" matches a man page (used in the "print_to_pdf" and "save_to_file"  functions)
+# Definition of the check_man_page function: Check if "${man_selected}" matches a man page (used in the "print_to_pdf" and "save_to_file" functions)
 check_man_page() {
 	if ! man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$; then
 		echo -e >&2 "${name}: man page not found -- '${man_selected}'\nTry '${name} --help' for more information."
@@ -104,11 +104,11 @@ output() {
 
 # Definition of the save function: Save the man page to a PDF file named "man_<command>.pdf" in the current directory
 save() {
-	file="man_${man_selected}.pdf"
-
 	if [ -z "${man_selected}" ]; then
 		menu
 	fi
+	
+	file="man_${man_selected}.pdf"
 
 	save_to_file
 }
@@ -117,7 +117,7 @@ save() {
 # Execute the different functions depending on the option
 case "${option}" in
 	-m|--menu|"")
-		menu
+		menu && print_to_pdf
 	;;
 	-o|--output)
 		output
