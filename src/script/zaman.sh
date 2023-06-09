@@ -51,7 +51,7 @@ check_man_page() {
 	fi
 }	
 
-# Definition of the print_to_pdf function: Print "${man_selected}" into a PDF file via `zathura` (used in the "menu" function and when the man page to print is specified directly in the command)
+# Definition of the print_to_pdf function: Print "${man_selected}" into a PDF file via `zathura`
 print_to_pdf() {
 	check_man_page
 	man -Tpdf "${man_selected}" | zathura - &
@@ -67,8 +67,6 @@ menu() {
 		echo -e >&2 "A dynamic menu is required to print the list of available man pages\nPlease, install rofi or dmenu"
 		exit 2
 	fi
-
-	print_to_pdf
 }
 
 # Definition of the save_to_file function: Save output to "${file}" (used in the "output" and "save" functions) 
@@ -119,7 +117,7 @@ save() {
 # Execute the different functions depending on the option
 case "${option}" in
 	-m|--menu|"")
-		menu
+		menu && print_to_pdf
 	;;
 	-o|--output)
 		output
