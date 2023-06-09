@@ -43,7 +43,7 @@ invalid_option() {
 	exit 1
 }
 
-# Definition of the check_man_page function: Check if "${man_selected}" matches a man page (used in the "print_to_pdf" and "save_to_file"  functions)
+# Definition of the check_man_page function: Check if "${man_selected}" matches a man page (used in the "print_to_pdf" and "save_to_file" functions)
 check_man_page() {
 	if ! man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$; then
 		echo -e >&2 "${name}: man page not found -- '${man_selected}'\nTry '${name} --help' for more information."
@@ -51,7 +51,7 @@ check_man_page() {
 	fi
 }	
 
-# Definition of the print_to_pdf function: Print "${man_selected}" into a PDF file via `zathura`
+# Definition of the print_to_pdf function: Print "${man_selected}" into a PDF file via `zathura` (used in the "menu" function and when the man page to print is specified directly in the command)
 print_to_pdf() {
 	check_man_page
 	man -Tpdf "${man_selected}" | zathura - &
@@ -67,6 +67,8 @@ menu() {
 		echo -e >&2 "A dynamic menu is required to print the list of available man pages\nPlease, install rofi or dmenu"
 		exit 2
 	fi
+
+	print_to_pdf
 }
 
 # Definition of the save_to_file function: Save output to "${file}" (used in the "output" and "save" functions) 
@@ -104,11 +106,11 @@ output() {
 
 # Definition of the save function: Save the man page to a PDF file named "man_<command>.pdf" in the current directory
 save() {
-	file="man_${man_selected}.pdf"
-
 	if [ -z "${man_selected}" ]; then
 		menu
 	fi
+	
+	file="man_${man_selected}.pdf"
 
 	save_to_file
 }
