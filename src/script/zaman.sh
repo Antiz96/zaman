@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# zaman: A simple cli tool that prints (or saves) man pages in a PDF file for an easier reading.
+# https://github.com/Antiz96/zaman
+# Licensed under the GPL-3.0 license
+
 #Current version
 version="1.2.1"
 
