@@ -12,22 +12,23 @@ A simple tool that prints (or saves) man pages in a PDF file via Zathura for an 
 
 .SH OPTIONS
 .PP
-.RB "If no option is passed, print the list of all the available man pages on the system in a dynamic menu (rofi or dmenu); allowing you to search for the one to print as a PDF."
+You can directly specify the man page to print as a PDF in the command: zaman 'man page to open'
 .br
-.br
-.RB "Alternatively, you can directly specify the man page to open in the command:"
-.br
-.RB "zaman 'man page to open', e.g.: zaman ls"
+e.g.: "zaman ls"
 .PP
 
+.TP 
+.B \-m, \-\-menu
+Print the list of all the available man pages in a dynamic menu (rofi or dmenu); allowing you to search for the one to print as a PDF (default operation).
+
 .TP
-.B \-o, \-\-output <file>
+.B \-o, \-\-output <man_page> <file>
 Write the output to "file". Useful to save the PDF converted man page to a file of your choice:
 .br
 e.g.: "zaman -o ls ~/Documents/man/ls.pdf"
 
 .TP
-.B \-O, \-\-save
+.B \-O, \-\-save <man_page>
 Write the output to a PDF file named "man_<command>.pdf" inside your current directory. Useful to quickly save the PDF converted man page to a file:
 .br
 You can either select the man page to save as a PDF file via the rofi/dmenu list:

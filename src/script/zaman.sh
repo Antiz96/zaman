@@ -101,7 +101,7 @@ save() {
 
 # Execute the different functions depending on the option
 case "${option}" in
-	"")
+	-m|--menu|"")
 		menu
 	;;
 	-o|--output)
