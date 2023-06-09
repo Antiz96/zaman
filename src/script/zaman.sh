@@ -7,7 +7,9 @@
 # Variables definition
 name="zaman"
 version="1.2.1"
-argument="${1}"
+option="${1}"
+man_selected="${2}"
+file="${3}"
 
 # Definition of the help function: Print the help message
 help() {
@@ -19,9 +21,9 @@ version() {
 	echo "${name} ${version}"
 }
 
-# Definition of the invalid_argument function: Print an error message, ask the user to check the help and exit
-invalid_argument() {
-	echo -e >&2 "${name}: invalid argument -- '${argument}'\nTry '${name} --help' for more information."
+# Definition of the invalid_option function: Print an error message, ask the user to check the help and exit
+invalid_option() {
+	echo -e >&2 "${name}: invalid option -- '${option}'\nTry '${name} --help' for more information."
 	exit 1
 }
 
@@ -77,9 +79,6 @@ save_to_file() {
 
 # Definition of the output function: Save the man page to the specified PDF file
 output() {
-	man_selected="${2}"
-	file="${3}"
-
 	if [ -z "${man_selected}" ] || [ -z "${file}" ]; then
 		echo -e >&2 "Please, specify a man page to export and a file to save it to: ${name} -o man_page /path/to/file\nTry '${name} --help' for more information."
 		exit 1
@@ -90,7 +89,6 @@ output() {
 
 # Definition of the save function: Save the man page to a PDF file named "man_<command>.pdf" in the current directory
 save() {
-	man_selected="${2}"
 	file="man_${man_selected}.pdf"
 
 	if [ -z "${man_selected}" ]; then
@@ -101,8 +99,8 @@ save() {
 }
 
 
-# Execute the different functions depending on the argument
-case "${argument}" in
+# Execute the different functions depending on the option
+case "${option}" in
 	"")
 		menu
 	;;
@@ -119,9 +117,10 @@ case "${argument}" in
 		version
 	;;
 	*)
-		if [ "${argument:0:1}" == "-" ]; then
-			invalid_argument
+		if [ "${option:0:1}" == "-" ]; then
+			invalid_option
 		else
+			man_selected="${option}"
 			print_to_pdf
 		fi
 	;;
