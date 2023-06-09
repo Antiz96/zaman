@@ -1,6 +1,6 @@
 # Zaman
 
-A simple tool that prints man pages in a PDF file (with vim keys support) for an easier reading.
+A simple cli tool that prints (or saves) man pages in a PDF file for an easier reading.
 
 ## Table of contents
 
@@ -99,6 +99,13 @@ Options:
   -O, --save <man page>           Save <man page> into the "man_<man page>.pdf" file in the current directory; if <man page> isn't specified, open a menu via rofi or dmenu that lists every man pages to choose from
   -h, --help                      Display this message and exit
   -V, --version                   Display version information and exit
+
+Exit codes:
+0  OK
+1  Invalid option or man page
+2  Neither `rofi` nor `dmenu` are installed
+3  User didn't gave the confirmation to proceed
+4  User didn't specified a man page or a file to save it to in the -o/--output option
 ```
   
 For more information, see the zaman(1) man page

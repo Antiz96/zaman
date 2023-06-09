@@ -65,7 +65,7 @@ menu() {
 		man_selected=$(man -k . | awk '{print $1}' | dmenu -l 15)
 	else
 		echo -e >&2 "A dynamic menu is required to print the list of available man pages\nPlease, install rofi or dmenu"
-		exit 1
+		exit 2
 	fi
 }
 
@@ -83,21 +83,20 @@ save_to_file() {
 			;;
 			*)
 				echo -e >&2 "\nAborting"
-				exit 1
+				exit 3
 			;;
 		esac
 	fi
 
 	man -Tpdf "${man_selected}" > "${file}"
 	echo "The ${man_selected} man page has been saved to the ${file} file"
-	exit 0
 }
 
 # Definition of the output function: Save the man page to the specified PDF file
 output() {
 	if [ -z "${man_selected}" ] || [ -z "${file}" ]; then
 		echo -e >&2 "Please, specify a man page to export and a file to save it to: ${name} -o man_page /path/to/file\nTry '${name} --help' for more information."
-		exit 1
+		exit 4
 	fi
 
 	save_to_file
