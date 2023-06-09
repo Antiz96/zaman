@@ -6,7 +6,7 @@
 
 # Variables definition
 name="zaman"
-version="1.2.1"
+version="1.2.2"
 option="${1}"
 man_selected="${2}"
 file="${3}"
