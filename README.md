@@ -87,70 +87,21 @@ Alternatively, you can specify the destination file with the `-o` (or `--output`
 
 ![zaman_output](https://user-images.githubusercontent.com/53110319/226755261-cb4bf006-fae3-48ea-8187-8c4e1772b7b0.png)
 
-
 ## Documentation
 
-See the documentation below:  
-  
-*The documentation is also available as a man page and with the "--help" option.*  
-*Run `man zaman` or `zaman --help` (or even `zaman zaman` actually :smile:) after you've installed the `zaman` package.*  
-    
-### SYNOPSIS
-
-zaman [OPTION] [MAN PAGE]
-
-### DESCRIPTION
-
-A simple tool that prints (or saves) man pages in a PDF file via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
-It also allows you to navigate through all the man pages available on your system via [Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/).
-
-### OPTIONS
-
-If no option is passed, print the list of all the available man pages on the system in a dynamic menu (rofi or dmenu); allowing you to search for the one to print as a PDF.  
-  
-Alternatively, you can directly specify the man page to open in the command (example below with the "ls" man page):  
 ```
-zaman ls
-```
+Directly specify the man page to print as a PDF in the command: zaman 'man page to open'
+e.g.: zaman ls
 
-#### -o, --output "file"
-
-Write the output to "file". Useful to save the PDF converted man page to a file of your choice:
-```
-zaman -o ls ~/Documents/man/ls.pdf
-```
-
-#### -O, --save
-
-Write the output to a PDF file named "man_`command`.pdf" inside your current directory. Useful to quickly save the PDF converted man page to a file:
-  
-You can either select the man page to save as a PDF file via the rofi/dmenu list:
-```
-zaman -O
+Options:
+  -m, --menu                      Print a menu via rofi or dmenu that lists every man pages to choose from (default operation)
+  -o, --output <man page> <file>  Save <man page> into the <file> PDF file
+  -O, --save <man page>           Save <man page> into the "man_<man page>.pdf" file in the current directory; if <man page> isn't specified, open a menu via rofi or dmenu that lists every man pages to choose from
+  -h, --help                      Display this message and exit
+  -V, --version                   Display version information and exit
 ```
   
-Or you can directly specify the man page to save as a PDF file in the command:
-```
-zaman -O ls
-``` 
-
-#### -v, --version
-
-Print the current version
-
-#### -h, --help
-
-Print the help
-
-### EXIT STATUS
-
-#### 0
-
-if OK
-
-#### 1
-
-if problems (user tried to open a non-existing man page, user does not have any dynamic menu installed, user did not specify a man page or a file path when using the output option...)
+For more information, see the zaman(1) man page
 
 ## Contributing
 
