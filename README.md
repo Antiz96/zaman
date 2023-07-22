@@ -4,11 +4,11 @@ A simple cli tool that prints (or saves) man pages in a PDF file for an easier r
 
 ## Table of contents
 
-* [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Documentation](#documentation)
-* [Contributing](#contributing)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
 
 ## Description
 
@@ -25,43 +25,45 @@ Make sure you also have a zathura PDF backend installed (either [zathura-pdf-pop
 ### From Source
 
 Install dependencies:  
-  
+
 - Replace `zathura-pdf-poppler` by `zathura-pdf-mupdf` if you prefer to use the `mupdf` backend.
 - Replace `rofi` by `dmenu` if you prefer to use that (it's called `suckless-tools` on Debian/Ubuntu).
 
 #### Debian/Ubuntu
 
-```
+```bash
 sudo apt install man-db groff zathura zathura-pdf-poppler rofi
 ```
 
 #### RedHat/Fedora
 
-```
+```bash
 sudo dnf install man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-pdf-poppler rofi
 ```
 
 #### Arch Linux
 
-```
+```bash
 sudo pacman -S man-db groff zathura zathura-pdf-poppler rofi
 ```
 
 #### Gentoo
 
-```
+```bash
 sudo emerge man-db groff zathura zathura-pdf-poppler rofi
 ```
-  
+
 Download the archive of the [latest stable release](https://github.com/Antiz96/zaman/releases/latest) and extract it *(alternatively, you can clone this repository via `git`)*.  
-  
+
 To install `zaman`, go into the extracted/cloned directory and run the following command:
-```
+
+```bash
 sudo make install
 ```
-   
-To uninstall `zaman`, go into the extracted/cloned directory and run the following command:  
-```
+
+To uninstall `zaman`, go into the extracted/cloned directory and run the following command:
+
+```bash
 sudo make uninstall
 ```
 
@@ -89,7 +91,7 @@ Alternatively, you can specify the destination file with the `-o` (or `--output`
 
 ## Documentation
 
-```
+```text
 Directly specify the man page to print as a PDF in the command: zaman 'man page to open'
 e.g.: zaman ls
 
@@ -107,7 +109,7 @@ Exit codes:
 3  User didn't gave the confirmation to proceed
 4  User didn't specified a man page or a file to save it to in the -o/--output option
 ```
-  
+
 For more information, see the zaman(1) man page
 
 ## Contributing
