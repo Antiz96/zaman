@@ -24,7 +24,7 @@ Make sure you also have a zathura PDF backend installed (either [zathura-pdf-pop
 
 ### From Source
 
-Install dependencies:  
+Install dependencies:
 
 - Replace `zathura-pdf-poppler` by `zathura-pdf-mupdf` if you prefer to use the `mupdf` backend.
 - Replace `rofi` by `dmenu` if you prefer to use that (it's called `suckless-tools` on Debian/Ubuntu).
@@ -53,7 +53,7 @@ sudo pacman -S man-db groff zathura zathura-pdf-poppler rofi
 sudo emerge man-db groff zathura zathura-pdf-poppler rofi
 ```
 
-Download the archive of the [latest stable release](https://github.com/Antiz96/zaman/releases/latest) and extract it *(alternatively, you can clone this repository via `git`)*.  
+Download the archive of the [latest stable release](https://github.com/Antiz96/zaman/releases/latest) and extract it *(alternatively, you can clone this repository via `git`)*.
 
 To install `zaman`, go into the extracted/cloned directory and run the following command:
 
@@ -69,23 +69,23 @@ sudo make uninstall
 
 ## Usage
 
-Run the `zaman` command in your terminal to display a list of all the available man pages on your system (via [Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/)), allowing you to search for the one to print as a PDF.  
+Run the `zaman` command in your terminal to display a list of all the available man pages on your system (via [Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/)), allowing you to search for the one to print as a PDF.
 
 ![zaman](https://user-images.githubusercontent.com/53110319/226755165-3080f232-cb9f-4d5b-aa06-b18032cd8eaa.png)
 
-Alternatively, you can directly specify the man page to open in the command (example below with the "ls" man page):  
+Alternatively, you can directly specify the man page to open in the command (example below with the "ls" man page):
 
 ![zaman_cmd](https://user-images.githubusercontent.com/53110319/226755190-9d005cbe-b893-4b96-b6c1-db97a70f3a4b.png)
 
-The man page will open as a PDF file in [Zathura](https://pwmt.org/projects/zathura/). Just press `q` to quit, as you would normally do when reading a man page:  
+The man page will open as a PDF file in [Zathura](https://pwmt.org/projects/zathura/). Just press `q` to quit, as you would normally do when reading a man page:
 
 ![zaman_pdf](https://github.com/Antiz96/zaman/assets/53110319/fca2f8a7-c428-47f9-a1cd-e3dd295ce3ca)
 
-You can save a specific man page in a PDF file called "man_`command`.pdf" in your current directory with the `-O` (or `--save`) option *(if you run `zaman -O` without specifying a man page to save, `zaman` will offer you to select one via rofi/dmenu)*:  
+You can save a specific man page in a PDF file called "man_`command`.pdf" in your current directory with the `-O` (or `--save`) option *(if you run `zaman -O` without specifying a man page to save, `zaman` will offer you to select one via rofi/dmenu)*:
 
 ![zaman_save](https://user-images.githubusercontent.com/53110319/226755247-637c4827-9940-43e4-88e9-4978152e4cc4.png)
 
-Alternatively, you can specify the destination file with the `-o` (or `--output`) option:  
+Alternatively, you can specify the destination file with the `-o` (or `--output`) option:
 
 ![zaman_output](https://user-images.githubusercontent.com/53110319/226755261-cb4bf006-fae3-48ea-8187-8c4e1772b7b0.png)
 
