@@ -2,7 +2,7 @@ name: Test suite
 on: pull_request
 
 jobs:
-  test_suite:
+  Test:
     runs-on: ubuntu-latest
 
     container:
