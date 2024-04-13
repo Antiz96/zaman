@@ -2,7 +2,7 @@
 
 # zaman: A simple cli tool that prints (or saves) man pages in a PDF file for an easier reading.
 # https://github.com/Antiz96/zaman
-# Licensed under the GPL-3.0 license
+# Licensed under the GPL-3.0 license (or any later version of that license).
 
 # Variables definition
 name="zaman"
