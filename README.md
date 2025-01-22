@@ -7,6 +7,7 @@
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Description
 
