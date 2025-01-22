@@ -35,7 +35,7 @@ esac
 # Definition of the help function: Print the help message
 help() {
 	cat <<EOF
-A simple CLI tool to display (or save) man pages as PDFs files via Zathura for an easier reading.
+A simple CLI tool to display (or save) man pages as PDFs files for an easier reading.
 
 You can directly specify the man page to display as a PDF. For instance, to display the 'ls' man page:
 ${name} ls

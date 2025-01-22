@@ -2,7 +2,7 @@ zaman(1) ["Zaman 1.3.0" ["Zaman Manual"]]
 
 # NAME
 
-*Zaman* - CLI tool to display (or save) man pages as PDFs.
+*Zaman* - A simple CLI tool to display (or save) man pages as PDFs files.
 
 # DESCRIPTION
 
