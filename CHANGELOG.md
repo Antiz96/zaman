@@ -6,36 +6,36 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Add shell completions for bash, zsh and fish by @Antiz96 in https://github.com/Antiz96/zaman/pull/50
+- Add shell completions for bash, zsh and fish by @Antiz96 in <https://github.com/Antiz96/zaman/pull/50>
 
-### Improvements 
+### Improvements
 
-- Use complete version ref in man page by @Antiz96 in https://github.com/Antiz96/zaman/pull/46
-- Add a trust path for users by @Antiz96 in https://github.com/Antiz96/zaman/pull/47
-- Precise that Zaman is licensed under GPL3+ by @Antiz96 in https://github.com/Antiz96/zaman/pull/48
-- Add comments to the Makefile by @Antiz96 in https://github.com/Antiz96/zaman/pull/49
+- Use complete version ref in man page by @Antiz96 in <https://github.com/Antiz96/zaman/pull/46>
+- Add a trust path for users by @Antiz96 in <https://github.com/Antiz96/zaman/pull/47>
+- Precise that Zaman is licensed under GPL3+ by @Antiz96 in <https://github.com/Antiz96/zaman/pull/48>
+- Add comments to the Makefile by @Antiz96 in <https://github.com/Antiz96/zaman/pull/49>
 
 ## [v1.2.2](https://github.com/Antiz96/zaman/releases/tag/v1.2.2) - 2023-06-10
 
-- Add a GitHub action to run shellcheck on pull requests by @Antiz96 in https://github.com/Antiz96/zaman/pull/26
-- Add basic but useful information at the top of the main script by @Antiz96 in https://github.com/Antiz96/zaman/pull/27
-- Refactoring the script with functions by @Antiz96 in https://github.com/Antiz96/zaman/pull/28
-- Add the '-m|--menu' option by @Antiz96 in https://github.com/Antiz96/zaman/pull/29
-- Add a clear and concise help message (instead of simply printing the man page) for the --help option by @Antiz96 in https://github.com/Antiz96/zaman/pull/30
-- Use separated exit codes for each type of errors by @Antiz96 in https://github.com/Antiz96/zaman/pull/31
-- Bump the script to v1.2.2 by @Antiz96 in https://github.com/Antiz96/zaman/pull/32
+- Add a GitHub action to run shellcheck on pull requests by @Antiz96 in <https://github.com/Antiz96/zaman/pull/26>
+- Add basic but useful information at the top of the main script by @Antiz96 in <https://github.com/Antiz96/zaman/pull/27>
+- Refactoring the script with functions by @Antiz96 in <https://github.com/Antiz96/zaman/pull/28>
+- Add the '-m|--menu' option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/29>
+- Add a clear and concise help message (instead of simply printing the man page) for the --help option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/30>
+- Use separated exit codes for each type of errors by @Antiz96 in <https://github.com/Antiz96/zaman/pull/31>
+- Bump the script to v1.2.2 by @Antiz96 in <https://github.com/Antiz96/zaman/pull/32>
 
 ## [v1.2.1](https://github.com/Antiz96/zaman/releases/tag/v1.2.1) - 2023-05-13
 
-- Run the zathura process in the background by @Antiz96 in https://github.com/Antiz96/zaman/pull/24
+- Run the zathura process in the background by @Antiz96 in <https://github.com/Antiz96/zaman/pull/24>
 
 ## [v1.2.0](https://github.com/Antiz96/zaman/releases/tag/v1.2.0) - 2023-03-22
 
-- Let the users choose their preferred pdf backend between [zathura-pdf-poppler] and [zathura-pdf-mupdf] by @Antiz96 in https://github.com/Antiz96/zaman/pull/19
-- Add rofi support by @Antiz96 in https://github.com/Antiz96/zaman/pull/20
-- Print a proper error if no man page or file path is specified when using the output option by @Antiz96 in https://github.com/Antiz96/zaman/pull/21
-- Stop opening PDF man pages in fullscreen mode by default by @Antiz96 in https://github.com/Antiz96/zaman/pull/22
-- Bump the main script to v1.2.0 by @Antiz96 in https://github.com/Antiz96/zaman/pull/23
+- Let the users choose their preferred pdf backend between [zathura-pdf-poppler] and [zathura-pdf-mupdf] by @Antiz96 in <https://github.com/Antiz96/zaman/pull/19>
+- Add rofi support by @Antiz96 in https://github.com/Antiz96/zaman/pull/20>
+- Print a proper error if no man page or file path is specified when using the output option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/21>
+- Stop opening PDF man pages in fullscreen mode by default by @Antiz96 in <https://github.com/Antiz96/zaman/pull/22>
+- Bump the main script to v1.2.0 by @Antiz96 in <https://github.com/Antiz96/zaman/pull/23>
 
 ## [v1.1.0](https://github.com/Antiz96/zaman/releases/tag/v1.1.0) - 2022-09-21
 
@@ -44,9 +44,9 @@ All notable changes to this project will be documented in this file.
 ```bash
 zaman -o ls ~/Documents/man/ls.pdf
 ```
-  
+
 - **New feature**: The `-O`/`--save` flag allows you to quickly save the PDF converted man page to a local file named `man_<command>.pdf` (requested in #15 by @SomethingGeneric)  
-  
+
 You can either select the man page to save as a PDF file via the dmenu list:
 
 ```bash
@@ -72,10 +72,8 @@ zaman -O ls
 
 ## [v1.0.1](https://github.com/Antiz96/zaman/releases/tag/v1.0.1) - 2022-08-09
 
-
 - Added groff as a dependency (also "groff-perl" and "perl(Compress:Zlib)" for RedHat/Fedora based distros)
 - Various typo fixes
-
 
 ## [v1.0.0](https://github.com/Antiz96/zaman/releases/tag/v1.0.0) - 2022-08-08
 
