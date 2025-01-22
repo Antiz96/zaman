@@ -1,15 +1,19 @@
 #!/bin/bash
 
-# zaman: A simple cli tool that prints (or saves) man pages in a PDF file for an easier reading.
+# zaman: A simple CLI tool to display (or save) man pages as PDFs files for an easier reading.
 # https://github.com/Antiz96/zaman
 # Licensed under the GPL-3.0 license (or any later version of that license).
 
-# Variables definition
+# General variables
 name="zaman"
 version="1.2.3"
 option="${1}"
 man_selected="${2}"
 file="${3}"
+
+# Create tmp dir if it doesn't exists
+tmpdir="${TMPDIR:-/tmp}/${name}-${UID}"
+mkdir -p "${tmpdir}"
 
 # Display debug traces if the -D / --debug argument is passed
 for arg in "${@}"; do
@@ -67,10 +71,22 @@ check_man_page() {
 	fi
 }	
 
-# Definition of the print_to_pdf function: Print "${man_selected}" into a PDF file via `zathura`
+# Definition of the print_to_pdf function: Display "${man_selected}" in a PDF file
 print_to_pdf() {
 	check_man_page
-	man -Tpdf "${man_selected}" | zathura - &
+
+	# Check if a default PDF reader is set, otherwise fallback to zathura
+	if [ -n "$(xdg-mime query default application/pdf)" ]; then
+		pdf_reader="xdg-open"
+	elif command -v zathura > /dev/null; then
+		pdf_reader="zathura"
+	else
+		echo -e >&2 "There is no default PDF reader defined and Zathura isn't installed\nPlease, define a default PDF reader in XDG Mime Applications or install Zathura"
+		exit 5
+	fi
+
+	man -Tpdf "${man_selected}" > "${tmpdir}/${man_selected}.pdf"
+        "${pdf_reader}" "${tmpdir}/${man_selected}.pdf" &
 }
 
 # Definition of the menu function: Print the list of available man pages through a `rofi` or `dmenu` menu

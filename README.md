@@ -11,8 +11,9 @@
 
 ## Description
 
-A simple CLI tool to display (or save) man pages as PDFs files via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
-It also allows to navigate through all the man pages available on your system via a dynamic menu ([Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/)).
+A simple CLI tool to display (or save) man pages as PDFs files for an easier reading.  
+Zaman first looks for the default PDF reader defined in [XDG MIME Applications](https://wiki.archlinux.org/title/XDG_MIME_Applications) and fallback to [Zathura](https://pwmt.org/projects/zathura/) if no default PDF reader is set.  
+It also allows to navigate through all the man pages available on the system through a dynamic menu via [Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/).
 
 ## Installation
 
@@ -31,35 +32,35 @@ Install dependencies:
 #### Debian / Ubuntu
 
 ```bash
-sudo apt install man-db groff zathura zathura-pdf-poppler rofi
+sudo apt install man-db groff xdg-utils zathura zathura-pdf-poppler rofi
 sudo apt install make bats scdoc
 ```
 
 #### Fedora
 
 ```bash
-sudo dnf install man-db groff groff-perl "perl(Compress::Zlib)" zathura zathura-pdf-poppler rofi
+sudo dnf install man-db groff groff-perl "perl(Compress::Zlib)" xdg-utils zathura zathura-pdf-poppler rofi
 sudo dnf install make bats scdoc
 ```
 
 #### Arch Linux
 
 ```bash
-sudo pacman -S man-db groff zathura zathura-pdf-poppler rofi
+sudo pacman -S man-db groff xdg-utils zathura zathura-pdf-poppler rofi
 sudo pacman -S --asdeps make bats scdoc
 ```
 
 #### Alpine Linux
 
 ```bash
-sudo apk add man-db groff zathura zathura-pdf-poppler rofi
+sudo apk add man-db groff xdg-utils zathura zathura-pdf-poppler rofi
 sudo apk add make bats scdoc
 ```
 
 #### Gentoo
 
 ```bash
-sudo emerge man-db groff zathura zathura-pdf-poppler rofi
+sudo emerge man-db groff xdg-utils zathura zathura-pdf-poppler rofi
 sudo emerge make bats scdoc
 ```
 
@@ -95,7 +96,7 @@ Alternatively, you can directly specify the man page to open in the command (exa
 
 ![zaman_cmd](https://user-images.githubusercontent.com/53110319/226755190-9d005cbe-b893-4b96-b6c1-db97a70f3a4b.png)
 
-The man page is opened as a PDF file in [Zathura](https://pwmt.org/projects/zathura/).
+The man page is opened as a PDF file in the default PDF reader defined in [XDG Mime Applications](https://wiki.archlinux.org/title/XDG_MIME_Applications) or in [Zathura](https://pwmt.org/projects/zathura/) if no default PDF reader is set.
 
 ![zaman_pdf](https://github.com/Antiz96/zaman/assets/53110319/fca2f8a7-c428-47f9-a1cd-e3dd295ce3ca)
 

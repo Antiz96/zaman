@@ -1,13 +1,14 @@
-zaman(1) ["zaman 1.2.3" ["zaman Manual"]]
+zaman(1) ["Zaman 1.2.3" ["Zaman Manual"]]
 
 # NAME
 
-*zaman* - CLI tool to display (or save) man pages as PDFs.
+*Zaman* - CLI tool to display (or save) man pages as PDFs.
 
 # DESCRIPTION
 
-A simple CLI tool to display (or save) man pages as PDFs files in Zathura for easier reading.
-It also allows to navigate through all the man pages available on your system via a dynamic menu (Rofi or Dmenu).
+A simple CLI tool to display (or save) man pages as PDFs files for an easier reading.
+Zaman first looks for the default PDF reader defined in XDG MIME Applications and fallback to Zathura if no default PDF reader is set.
+It also allows to navigate through all the man pages available on the system through a dynamic menu via Rofi or Dmenu.
 
 # SYNOPSIS
 
@@ -59,14 +60,18 @@ zaman ls
 *4*
 	User didn't specified a man page or a file to export it in to with the `-o / --output` option.
 
+*5*
+	No default PDF reader defined in XDG Mime Application and `zathura` isn't installed as well.
+
 # SEE ALSO
 
-*zathura*(1),
+*man*(1),
+*groff*(1),
+*xdg-mime*(1),
+*xdg-open*(1),
 *rofi*(1),
 *dmenu*(1),
-*groff*(1),
-*echo*(1),
-*grep*(1)
+*zathura*(1)
 
 # BUGS
 
