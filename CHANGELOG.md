@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.0](https://github.com/Antiz96/zaman/releases/tag/v1.3.0) - 2025-01-22
+
+### Features
+
+- Use default PDF reader defined in XDG Mime Application (fallback to zathura) ([#65](https://github.com/Antiz96/zaman/pull/65)) - ([40a6f71](https://github.com/Antiz96/zaman/commit/40a6f719070afab8161e7e66ef81c4a1f582e2cf)) by @Antiz96
+- Add dynamic shell completions for man pages ([#64](https://github.com/Antiz96/zaman/pull/64)) - ([8586cb4](https://github.com/Antiz96/zaman/commit/8586cb4fccb3ec03ee802e95ccf78dafb704f5be)) by @Antiz96
+- Add the `-D / --debug` option ([#63](https://github.com/Antiz96/zaman/pull/63)) - ([28e6917](https://github.com/Antiz96/zaman/commit/28e69175c61b50293678a252c3bef2e7d312bc7d)) by @Antiz96
+
+### Fixes
+
+- Fix script path in Makefile ([#59](https://github.com/Antiz96/zaman/pull/59)) - ([f1d2efb](https://github.com/Antiz96/zaman/commit/f1d2efbf858ef5bdd48843caea189b31a95891ea)) by @Antiz96
+
+### Documentation
+
+- Add the 'License' section to the table of content in the README ([#60](https://github.com/Antiz96/zaman/pull/60)) - ([2dabea9](https://github.com/Antiz96/zaman/commit/2dabea9565bc5a530d055a7dd62d6433fc7b3621)) by @Antiz96
+- Overall documentation rework ([#56](https://github.com/Antiz96/zaman/pull/56)) - ([a08403a](https://github.com/Antiz96/zaman/commit/a08403ad9d096a3a0745bdf31cf74e3fc8fac3b3)) by @Antiz96
+
+### Styling
+
+- *(CONTRIBUTING.md)* Fix typos ([#61](https://github.com/Antiz96/zaman/pull/61)) - ([848e796](https://github.com/Antiz96/zaman/commit/848e796331f4b271eeca4f05b6b8e663f23e6985)) by @Antiz96
+
+### Miscellaneous
+
+- Update mdl rules in CI ([#62](https://github.com/Antiz96/zaman/pull/62)) - ([5902d50](https://github.com/Antiz96/zaman/commit/5902d506cbfcc44a6b479bdb0de1ee37ed4aa65d)) by @Antiz96
+- Add Release instructions + Changelog ([#58](https://github.com/Antiz96/zaman/pull/58)) - ([d83b65c](https://github.com/Antiz96/zaman/commit/d83b65c65d0727f8f52b8fe444db4c020f166fe3)) by @Antiz96
+- Add simple unit tests with 'bats' ([#57](https://github.com/Antiz96/zaman/pull/57)) - ([7d42d37](https://github.com/Antiz96/zaman/commit/7d42d37d95cb8bfa876f65037ff09ab069214cc6)) by @Antiz96
+- Add issues / pull requests templates ([#55](https://github.com/Antiz96/zaman/pull/55)) - ([51a234f](https://github.com/Antiz96/zaman/commit/51a234f71b1de71fa0d328b82ab29b82d0ad984d)) by @Antiz96
+- Add CONTRIBUTING.md ([#54](https://github.com/Antiz96/zaman/pull/54)) - ([cc25e41](https://github.com/Antiz96/zaman/commit/cc25e4165098a34081664d8e1e058bcdf6484ffe)) by @Antiz96
+
 ## [v1.2.3](https://github.com/Antiz96/zaman/releases/tag/v1.2.3) - 2024-04-13
 
 ### Features

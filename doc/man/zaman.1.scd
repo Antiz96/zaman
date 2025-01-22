@@ -1,4 +1,4 @@
-zaman(1) ["Zaman 1.2.3" ["Zaman Manual"]]
+zaman(1) ["Zaman 1.3.0" ["Zaman Manual"]]
 
 # NAME
 
