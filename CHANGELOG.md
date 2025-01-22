@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.1](https://github.com/Antiz96/zaman/releases/tag/v1.3.1) - 2025-01-22
+
+### Documentation
+
+- Update help message and man page ([#66](https://github.com/Antiz96/zaman/pull/66)) - ([a28f3de](https://github.com/Antiz96/zaman/commit/a28f3dee7c29169e03dfdde5999e6194072fbe80)) by @Antiz96
+
 ## [v1.3.0](https://github.com/Antiz96/zaman/releases/tag/v1.3.0) - 2025-01-22
 
 ### Features
