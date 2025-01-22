@@ -11,6 +11,23 @@ option="${1}"
 man_selected="${2}"
 file="${3}"
 
+# Display debug traces if the -D / --debug argument is passed
+for arg in "${@}"; do
+	case "${arg}" in
+		-D|--debug)
+			set -x
+		;;
+	esac
+done
+
+# Reset the option var if it is equal to -D / --debug (to avoid false negative "invalid option" error)
+# shellcheck disable=SC2154
+case "${option}" in
+	-D|--debug)
+		unset option
+	;;
+esac
+
 # Definition of the help function: Print the help message
 help() {
 	cat <<EOF
@@ -20,9 +37,10 @@ You can directly specify the man page to display as a PDF. For instance, to disp
 ${name} ls
 
 Options:
-  -m, --menu                      Print a menu via rofi or dmenu that lists every man pages to choose from (default operation)
+  -m, --menu                      Show a dynamic menu (via rofi or dmenu) that lists every man pages to choose from (default operation)
   -o, --output <man page> <file>  Save <man page> into the <file> PDF file
   -O, --save <man page>           Save <man page> into a "man_<man page>.pdf" file in the current directory; if <man page> isn't specified, open a menu via rofi or dmenu that lists every man pages to choose from
+  -D, --debug                     Display debug traces
   -h, --help                      Display this message
   -V, --version                   Display version information
 
