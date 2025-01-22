@@ -2,9 +2,18 @@ pkgname=zaman
 
 PREFIX ?= /usr/local
 
-.PHONY: all install uninstall
+.PHONY: build test install clean uninstall
 
-all:
+build:
+	# Generate man page
+	scdoc < "doc/man/${pkgname}.1.scd" > "doc/man/${pkgname}.1"
+	
+	# Archive man page
+	gzip -c "doc/man/${pkgname}.1" > "doc/man/${pkgname}.1.gz"
+
+test:
+	# Run the help function of the main script as a simple test
+	"src/script/${pkgname}.sh" --help
 
 install:
 	# Install the main script
@@ -15,24 +24,27 @@ install:
 	install -Dm 644 "res/completions/${pkgname}.zsh" "${DESTDIR}${PREFIX}/share/zsh/site-functions/_${pkgname}"
 	install -Dm 644 "res/completions/${pkgname}.fish" "${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/${pkgname}.fish"
 
-	# Archive and install man pages
-	gzip -c "doc/man/${pkgname}.1" > "${pkgname}.1.gz"
+	# Install man page
 	install -Dm 644 "${pkgname}.1.gz" "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1.gz"
-	rm -f "${pkgname}.1.gz"
 
 	# Install documentation
 	install -Dm 644 README.md "${DESTDIR}${PREFIX}/share/doc/${pkgname}/README.md"
 
+clean:
+	# Delete generated and archived man page
+	rm -f "doc/man/${pkgname}.1"{,.gz}
+
 uninstall:
 	# Delete the main script
 	rm -f "${DESTDIR}${PREFIX}/bin/${pkgname}"
+
+	# Delete shell completions
+	rm -f "${DESTDIR}${PREFIX}/share/bash-completion/completions/${pkgname}"
+	rm -f "${DESTDIR}${PREFIX}/share/zsh/site-functions/_${pkgname}"
+	rm -f "${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/${pkgname}.fish"
 
 	# Delete man pages
 	rm -f "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1.gz"
 
 	# Delete documentation
 	rm -rf "${DESTDIR}${PREFIX}/share/doc/${pkgname}/"
-
-test:
-	# Run the help function of the main script as a simple test
-	"src/script/${pkgname}.sh" --help
