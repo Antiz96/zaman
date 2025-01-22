@@ -1,6 +1,5 @@
 # Zaman
 
-
 ## Table of contents
 
 - [Description](#description)
@@ -115,6 +114,6 @@ See `zaman --help` and the [zaman(1) man page](https://github.com/Antiz96/zaman/
 
 See the [contributing guidelines](https://github.com/Antiz96/zaman/blob/main/CONTRIBUTING.md).
 
-# License
+## License
 
 zaman is licensed under the [GPL-3.0 license](https://github.com/Antiz96/zaman/blob/main/LICENSE) (or any later version of that license).
