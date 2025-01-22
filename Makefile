@@ -12,8 +12,8 @@ build:
 	gzip -c "doc/man/${pkgname}.1" > "doc/man/${pkgname}.1.gz"
 
 test:
-	# Run the help function of the main script as a simple test
-	"src/script/${pkgname}.sh" --help
+	# Run some simple unit tests on basic functions
+	bats test/case/basic_functions.bats
 
 install:
 	# Install the main script
