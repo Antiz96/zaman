@@ -31,7 +31,7 @@ zaman ls
 *-O, --save* <man_page>
 	Export <man_page> into a "man_<command>.pdf" PDF file inside your current directory. 
 	For instance, `zaman -O ls` (which will save the `ls` man page in a file called `man_ls.pdf` PDF file in your current directory).
-	If <man_page> ins't specified (`zaman -O`), it opens a dynamic menu listing all man pages available on your system, allowing you to choose the one to export.
+	If <man_page> isn't specified (`zaman -O`), it opens a dynamic menu listing all man pages available on your system, allowing you to choose the one to export.
 
 *-V, --version*
 	Display version information.
