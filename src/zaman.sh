@@ -14,19 +14,17 @@ file="${3}"
 # Definition of the help function: Print the help message
 help() {
 	cat <<EOF
-${name} v${version}
+A simple CLI tool to display (or save) man pages as PDFs files via Zathura for an easier reading.
 
-A simple cli tool that prints (or saves) man pages in a PDF file for an easier reading.
-
-Directly specify the man page to print as a PDF in the command: ${name} 'man page to open'
-e.g.: ${name} ls
+You can directly specify the man page to display as a PDF. For instance, to display the 'ls' man page:
+${name} ls
 
 Options:
   -m, --menu                      Print a menu via rofi or dmenu that lists every man pages to choose from (default operation)
   -o, --output <man page> <file>  Save <man page> into the <file> PDF file
-  -O, --save <man page>           Save <man page> into the "man_<man page>.pdf" file in the current directory; if <man page> isn't specified, open a menu via rofi or dmenu that lists every man pages to choose from
-  -h, --help                      Display this message and exit
-  -V, --version                   Display version information and exit
+  -O, --save <man page>           Save <man page> into a "man_<man page>.pdf" file in the current directory; if <man page> isn't specified, open a menu via rofi or dmenu that lists every man pages to choose from
+  -h, --help                      Display this message
+  -V, --version                   Display version information
 
 For more information, see the ${name}(1) man page
 EOF

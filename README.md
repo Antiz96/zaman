@@ -11,7 +11,7 @@
 ## Description
 
 A simple CLI tool to display (or save) man pages as PDFs files via [Zathura](https://pwmt.org/projects/zathura/) for an easier reading.  
-It also allows to navigate through all the man pages available on your system via a dynamic menu ([Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/).
+It also allows to navigate through all the man pages available on your system via a dynamic menu ([Rofi](https://davatorium.github.io/rofi/) or [Dmenu](https://tools.suckless.org/dmenu/)).
 
 ## Installation
 
