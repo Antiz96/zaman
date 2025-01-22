@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 - Add a GitHub action to run shellcheck on pull requests by @Antiz96 in <https://github.com/Antiz96/zaman/pull/26>
 - Add basic but useful information at the top of the main script by @Antiz96 in <https://github.com/Antiz96/zaman/pull/27>
 - Refactoring the script with functions by @Antiz96 in <https://github.com/Antiz96/zaman/pull/28>
-- Add the '-m|--menu' option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/29>
+- Add the '-m / --menu' option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/29>
 - Add a clear and concise help message (instead of simply printing the man page) for the --help option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/30>
 - Use separated exit codes for each type of errors by @Antiz96 in <https://github.com/Antiz96/zaman/pull/31>
 - Bump the script to v1.2.2 by @Antiz96 in <https://github.com/Antiz96/zaman/pull/32>
@@ -32,7 +32,7 @@ All notable changes to this project will be documented in this file.
 ## [v1.2.0](https://github.com/Antiz96/zaman/releases/tag/v1.2.0) - 2023-03-22
 
 - Let the users choose their preferred pdf backend between [zathura-pdf-poppler] and [zathura-pdf-mupdf] by @Antiz96 in <https://github.com/Antiz96/zaman/pull/19>
-- Add rofi support by @Antiz96 in https://github.com/Antiz96/zaman/pull/20>
+- Add rofi support by @Antiz96 in <https://github.com/Antiz96/zaman/pull/20>
 - Print a proper error if no man page or file path is specified when using the output option by @Antiz96 in <https://github.com/Antiz96/zaman/pull/21>
 - Stop opening PDF man pages in fullscreen mode by default by @Antiz96 in <https://github.com/Antiz96/zaman/pull/22>
 - Bump the main script to v1.2.0 by @Antiz96 in <https://github.com/Antiz96/zaman/pull/23>
