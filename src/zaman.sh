@@ -48,7 +48,7 @@ Options:
   -h, --help                      Display this message
   -V, --version                   Display version information
 
-For more information, see the ${name}(1) man page
+For more information, see the ${name}(1) man page.
 EOF
 }
 
