@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.2](https://github.com/Antiz96/zaman/releases/tag/v1.3.2) - 2025-02-07
+
+### Styling
+
+- Add a missing dot in the help msg ([#67](https://github.com/Antiz96/zaman/pull/67)) - ([bcd4b86](https://github.com/Antiz96/zaman/commit/bcd4b86eceafcdff05b113ae6bf3630e0f521c8c)) by @Antiz96
+
+### Miscellaneous
+
+- Get rid of gzip timestamps during build to make Zaman reproducible ([#68](https://github.com/Antiz96/zaman/pull/68)) - ([51efce8](https://github.com/Antiz96/zaman/commit/51efce8d1671e57c4b02ad783923f1446b927456)) by @Antiz96
+
 ## [v1.3.1](https://github.com/Antiz96/zaman/releases/tag/v1.3.1) - 2025-01-22
 
 ### Documentation

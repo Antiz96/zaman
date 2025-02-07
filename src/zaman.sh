@@ -6,7 +6,7 @@
 
 # General variables
 name="zaman"
-version="1.3.1"
+version="1.3.2"
 option="${1}"
 man_selected="${2}"
 file="${3}"
