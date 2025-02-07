@@ -9,7 +9,7 @@ build:
 	scdoc < "doc/man/${pkgname}.1.scd" > "doc/man/${pkgname}.1"
 	
 	# Archive man page
-	gzip -c "doc/man/${pkgname}.1" > "doc/man/${pkgname}.1.gz"
+	gzip -nc "doc/man/${pkgname}.1" > "doc/man/${pkgname}.1.gz"
 
 test:
 	# Run some simple unit tests on basic functions
