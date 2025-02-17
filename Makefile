@@ -7,9 +7,6 @@ PREFIX ?= /usr/local
 build:
 	# Generate man page
 	scdoc < "doc/man/${pkgname}.1.scd" > "doc/man/${pkgname}.1"
-	
-	# Archive man page
-	gzip -nc "doc/man/${pkgname}.1" > "doc/man/${pkgname}.1.gz"
 
 test:
 	# Run some simple unit tests on basic functions
@@ -25,14 +22,14 @@ install:
 	install -Dm 644 "res/completions/${pkgname}.fish" "${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/${pkgname}.fish"
 
 	# Install man page
-	install -Dm 644 "doc/man/${pkgname}.1.gz" "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1.gz"
+	install -Dm 644 "doc/man/${pkgname}.1" "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1"
 
 	# Install documentation
 	install -Dm 644 README.md "${DESTDIR}${PREFIX}/share/doc/${pkgname}/README.md"
 
 clean:
-	# Delete generated and archived man page
-	rm -f "doc/man/${pkgname}.1"{,.gz}
+	# Delete generated man page
+	rm -f "doc/man/${pkgname}.1"
 
 uninstall:
 	# Delete the main script
@@ -44,7 +41,7 @@ uninstall:
 	rm -f "${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/${pkgname}.fish"
 
 	# Delete man pages
-	rm -f "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1.gz"
+	rm -f "${DESTDIR}${PREFIX}/share/man/man1/${pkgname}.1"
 
 	# Delete documentation
 	rm -rf "${DESTDIR}${PREFIX}/share/doc/${pkgname}/"
