@@ -59,14 +59,14 @@ version() {
 
 # Definition of the invalid_option function: Print an error message, ask the user to check the help and exit
 invalid_option() {
-	echo -e >&2 "${name}: invalid option -- '${option}'\nTry '${name} --help' for more information."
+	echo -e >&2 "${name}: invalid option -- '${option}'\nTry '${name} --help' for more information"
 	exit 1
 }
 
 # Definition of the check_man_page function: Check if "${man_selected}" matches a man page (used in the "print_to_pdf" and "save_to_file" functions)
 check_man_page() {
 	if ! man -k . | awk '{print $1}' | grep -iq ^"${man_selected}"$; then
-		echo -e >&2 "${name}: man page not found -- '${man_selected}'\nTry '${name} --help' for more information."
+		echo -e >&2 "${name}: man page not found -- '${man_selected}'\nTry '${name} --help' for more information"
 		exit 1
 	fi
 }	
@@ -127,7 +127,7 @@ save_to_file() {
 # Definition of the output function: Save the man page to the specified PDF file
 output() {
 	if [ -z "${man_selected}" ] || [ -z "${file}" ]; then
-		echo -e >&2 "Please, specify a man page to export and a file to save it to: ${name} -o man_page /path/to/file\nTry '${name} --help' for more information."
+		echo -e >&2 "Please, specify a man page to export and a file to save it to: ${name} -o man_page /path/to/file\nTry '${name} --help' for more information"
 		exit 4
 	fi
 
