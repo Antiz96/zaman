@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.3](https://github.com/Antiz96/zaman/releases/tag/v1.3.3) - 2025-02-17
+
+### Styling
+
+- Remove unconventional dots from output ([#70](https://github.com/Antiz96/zaman/pull/70)) - ([a330014](https://github.com/Antiz96/zaman/commit/a330014db2e46f5f7b0ac914536dfa6b94c61391)) by @Antiz96
+
+### Miscellaneous
+
+- *(man)* Don't compress man pages during build ([#69](https://github.com/Antiz96/zaman/pull/69)) - ([3048a2e](https://github.com/Antiz96/zaman/commit/3048a2ed0358ae7c22921b1d8e3f278af404fbb0)) by @Antiz96
+
 ## [v1.3.2](https://github.com/Antiz96/zaman/releases/tag/v1.3.2) - 2025-02-07
 
 ### Styling
