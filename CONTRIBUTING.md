@@ -24,6 +24,8 @@ Use English as much as possible for contributions & discussions. If required, I 
 
 ## Open an issue
 
+**Note:** For security concerns, please send a mail to robincandau@protonmail.com instead of opening a public issue.
+
 Before [opening an issue](https://github.com/Antiz96/zaman/issues/new/choose), verify that there isn't one already open on the same (or a similar) subject.
 
 Make sure to use the correct type for your issue (`Bug Report` or `Feature Request`) and to provide the requested information. If you have a doubt about which one is the most appropriate for your issue (or if you think that none of these types apply to your issue), feel free to use the general `Other` type.
