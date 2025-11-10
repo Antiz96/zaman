@@ -86,7 +86,7 @@ print_to_pdf() {
 	fi
 
 	man -Tpdf "${man_selected}" > "${tmpdir}/${man_selected}.pdf"
-        "${pdf_reader}" "${tmpdir}/${man_selected}.pdf" &
+	"${pdf_reader}" "${tmpdir}/${man_selected}.pdf" &
 }
 
 # Definition of the menu function: Print the list of available man pages through a `rofi` or `dmenu` menu
