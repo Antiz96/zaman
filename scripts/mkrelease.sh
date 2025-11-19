@@ -41,7 +41,7 @@ case "${answer}" in
 esac
 
 # Bump version where necessary
-sed -i "s/$(zaman -V | cut -f2 -d " ")/${release_tag}/g" doc/man/zaman.* src/zaman.sh
+sed -i "s/${latest_tag#v}/${release_tag}/g" doc/man/zaman.* src/zaman.sh
 
 # Update changelog
 git-cliff -up CHANGELOG.md
